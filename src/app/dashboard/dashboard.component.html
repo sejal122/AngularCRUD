@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+  <input type="text" [(ngModel)]="filterBy">
+  dashboard
+  <ul *ngFor="let prod of productList|filter:filterBy">
+   <a routerLink="/details/{{prod.id}}"><li>{{prod.title}}</li> </a> 
+  </ul>
+</body>
+</html>
